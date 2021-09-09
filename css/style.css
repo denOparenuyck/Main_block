@@ -183,6 +183,10 @@ body{
 .product__content-img{
     display: none;
 }
+.product__content-hide{
+    margin-top: 10px;
+    display: none;
+}
 
 @media(max-width:1339px){
     .container{
@@ -292,10 +296,6 @@ body{
     }
     .btn__more{
         display: block;
-    }
-    .product__content-hide{
-        margin-top: 10px;
-        display: none;
     }
     .product__content-hide.active{
         display: block;
