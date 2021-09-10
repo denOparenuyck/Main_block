@@ -138,6 +138,8 @@ body{
 
 .product__content {
     width: 100%;
+    position: relative;
+    z-index: 10;
 }
 .product__content-title {
     font-weight: 500;
