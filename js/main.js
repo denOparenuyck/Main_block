@@ -43,3 +43,12 @@ list.forEach((item, index) => {
 
 
 
+const itemText = document.querySelectorAll('.product__content-link');
+
+
+itemText.forEach(item => {
+    if(item.textContent.length > 20){
+       let text  = item.textContent.slice(0, 20);
+       item.innerText = text + '...';
+    }
+});
