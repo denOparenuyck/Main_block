@@ -84,10 +84,10 @@ body{
 }
 
 
-.product:hover .product__img::after{
+.product:hover .product__img-bg-b{
     opacity: 1;
 }
-.product:hover .product__img::before{
+.product:hover .product__img-bg-r{
     opacity: 1;
 }
 
@@ -111,42 +111,31 @@ body{
     z-index: 5;
     transition: transform .5s linear;
 }
-
-.product__img:hover{
-    transform: translateY(-5px);
-}
-
-
-
-.product__img::before,
-.product__img::after{
-    content: "";
-    position: absolute;
-    z-index: -1;
-    filter: blur(100px);
-    border-radius: 100%;
-    opacity: 0;
-    transition: opacity .6s ease-in-out;
-}
-.product__img::before{
-    width: 200px;
-    height: 200px;
-    background: rgba(6, 176, 252, 3);
-}
-
-.product__img::after{
-    width: 180px;
-    height: 180px;
-    background: rgba(252, 20, 6, 3);
-    top: 53px;
-    right: 150px;
-}
-
-
-
 .product__img img{
     transform: translateX(-27px);
 }
+
+
+
+.product__img-bg-b{
+    opacity: 0;
+   top: 0;
+   position: absolute;
+   z-index: -2;
+   top: -111px;
+   right: -104px;
+   transition: opacity .6s ease-in-out;
+}
+.product__img-bg-r{
+    opacity: 0;
+    top: -58px;
+    right: 31px;
+    z-index: -1;
+    position: absolute;
+    transition: opacity .6s ease-in-out;
+}
+
+
 .product__content {
     width: 100%;
 }
@@ -187,7 +176,10 @@ body{
 }
 .product .product__content-hide{
     margin-top: 10px;
-    display: none;
+    height: 0px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0s ease-in;
 }
 
 @media(max-width:1339px){
@@ -266,6 +258,7 @@ body{
         background: #fff;
         box-shadow: 0px 0px 15px rgba(6, 176, 252, 0.3);
         border-radius: 4px;
+        transition: .6s all;
     }
     .product__content-list:not(:last-child) {
         margin-right: 0px;
@@ -279,6 +272,9 @@ body{
     }
     .product__content-title.active{
         color: #fc1406;
+    }
+    .product__content-title.active::after{
+        background-image: url(../images/main-icon-2.png);
     }
     .product__content-title::after{
         content: "";
@@ -302,6 +298,11 @@ body{
     .product__content-hide.active{
         display: flex;
         flex-direction: column;
+        position: static;
+        opacity: 1;
+        height: auto;
+        transform: translateY(0%);
+        transition: all .6s ease-in;
     }
 }
 
