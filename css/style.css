@@ -255,7 +255,8 @@ body{
     .product{
         max-width: 337px;
         padding-left: 82px;
-    }    .product:not(:first-child)::before {
+    }    
+    .product:not(:first-child)::before {
         display: none;
     }
     .product__content-list--hide{
@@ -393,6 +394,12 @@ body{
     }
     .product__content-link{
         font-size: 15px;
+    }
+    .product:hover .product__img-hide{
+        opacity: 1;
+    }
+    .product:hover img{
+        opacity: 1;
     }
 }
 
