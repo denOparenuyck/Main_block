@@ -27,8 +27,18 @@ const title = document.querySelectorAll('.product__content-title');
 
 btn.forEach((item, index) => {
     item.addEventListener('click', () => {
-        list[index].classList.toggle('active');
+        active();
         parent[index].classList.toggle('active');
         title[index].classList.toggle('active');
     });
 });
+
+function active(){
+    list.forEach(item => {
+        if(item.classList.contains('active')){
+            item.classList.remove('active');
+        } else{
+            item.classList.add('active');
+        }
+    });
+}
