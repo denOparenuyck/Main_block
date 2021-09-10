@@ -328,6 +328,9 @@ body{
         box-shadow: none;
         border-radius: 0px;
     }
+    .product .product__content-hide{
+        display: none;
+    }
     .product__content-hide.active{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -353,7 +356,7 @@ body{
     .product:nth-child(6){
         display: none;
     }
- 
+    
 
     .product__content-list:first-child{
         position: relative;
@@ -366,7 +369,7 @@ body{
 
     .position{
         position: absolute;
-        top: 158px;
+        top: -52px;
         left: 265px;
         width: 280px;
     }
