@@ -114,8 +114,18 @@ body{
 .product__img img{
     transform: translateX(-27px);
 }
-
-
+.product__img-hide{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+.product__img:hover .product__img-hide{
+    opacity: 1;
+}
+.product__img:hover img{
+    opacity: 0;
+}
 
 .product__img-bg-b{
     opacity: 0;
